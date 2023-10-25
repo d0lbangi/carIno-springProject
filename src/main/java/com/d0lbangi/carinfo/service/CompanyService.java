@@ -15,7 +15,8 @@ public class CompanyService {
     @Autowired
     CompanyRepository companyRepository;
 
-    public Company save(CompanyInputDto companyInputDto) {
+    @Transactional
+    public Company saveCompanyInputDto(CompanyInputDto companyInputDto) {
 
         Company company = new Company();
         company.setCompanyName(companyInputDto.getCompanyName());
@@ -23,6 +24,10 @@ public class CompanyService {
         company.setCreatedAt(new Date());
         company.setUpdatedAt(new Date());
 
+        return companyRepository.save(company);
+    }
+
+    public Company save(Company company) {
         return companyRepository.save(company);
     }
 }

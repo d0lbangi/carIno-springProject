@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS CAR; -- 수정된 부분
+DROP TABLE IF EXISTS CAR;
 CREATE TABLE CAR(
                     id bigint auto_increment,
                     model_name varchar(255) not null,
@@ -8,7 +8,8 @@ CREATE TABLE CAR(
                     updated_at TIMESTAMP not null,
                     primary key(id)
 );
-DROP TABLE IF EXISTS COMPANY; -- 수정된 부분
+
+DROP TABLE IF EXISTS COMPANY;
 CREATE TABLE COMPANY(
                         id bigint auto_increment,
                         company_name varchar(255) not null,
