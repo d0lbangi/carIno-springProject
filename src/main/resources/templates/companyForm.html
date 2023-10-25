@@ -8,7 +8,27 @@
 <body>
 <h1>COMPANY FORM</h1>
 <form method="POST" th:action="@{/saveCompany}" th:object="${companyInputDto}">
-  <!-- Form fields go here -->
+  <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input th:name="companyName"
+             id="companyName"
+             type="text"
+             class="form-control"
+             name="companyName"/>
+  </div>
+  <div class="form-group">
+    <label for="companyNation">Company Nation</label>
+    <input th:name="companyNation"
+           id="companyNation"
+           type="text"
+           class="form-control"
+           name="companyNation"/>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-block">
+      REGISTER
+    </button>
+  </div>
 </form>
 </body>
 </html>
