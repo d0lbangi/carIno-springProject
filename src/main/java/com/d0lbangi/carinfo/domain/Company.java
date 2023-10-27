@@ -10,6 +10,14 @@ import java.util.Date;
 @Data
 public class Company extends BaseEntity{
 
+    public Company(){}
+    public Company(String companyName, String companyNation){
+        this.companyName = companyName;
+        this.companyNation = companyNation;
+        super.setUpdatedAt(new Date());
+        super.setCreatedAt(new Date());
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

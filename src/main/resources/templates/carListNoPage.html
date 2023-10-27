@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+<h1>CAR LIST</h1>
+<table border="1">
+    <tr>
+        <th>idx</th>
+        <th>model name</th>
+        <th>passengerCapacity</th>
+        <th>company name</th>
+        <th>company nation</th>
+    </tr>
+    <tr th:each="company: ${carList}">
+        <td th:text="${car.id}"></td>
+        <td th:text="${car.modelName}"></td>
+        <td th:text="${car.passengerCapacity}"></td>
+        <td th:text="${car.company.companyName}"></td>
+        <td th:text="${car.company.companyNation}"></td>
+    </tr>
+</table>
+</body>
+</html>
